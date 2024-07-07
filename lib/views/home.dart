@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
                     // ICON - HEADING
                     children: [
                       Material(
-                          elevation: 1.0,
+                          elevation: 0.5,
                           borderRadius: BorderRadius.circular(60),
                           child: Image.asset(
                             "assets/images/user_icon.png",

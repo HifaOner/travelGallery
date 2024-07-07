@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oua_flutter_travel_gallery/views/bottom_nav.dart';
 import 'package:oua_flutter_travel_gallery/views/categories.dart';
 import 'package:oua_flutter_travel_gallery/views/home.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home: const Categories(),
+      home: const BottomNav(),
     );
   }
 }

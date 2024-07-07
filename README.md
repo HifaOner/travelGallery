@@ -20,7 +20,7 @@ F59
 
 ### Uygulamanın birincil fonksiyonu:
 
-   - Kullanıcılar, yolculukları sırasında gideceği yerlere ait fotoğrafları görebilir, gittikleri zamanda onlarda oraya ait fotoğraf ekleyebilir.
+   - Kullanıcılar, yolculukları sırasında gideceği yerlere ait fotoğrafları görebilir, onlarda oraya ait fotoğraf ekleyebilir.
 
 ### Uygulamanın ikincil fonksiyonu:
 
@@ -28,7 +28,7 @@ F59
      
 ## Ürün Özellikleri
 
-   - Aratılan her bölgeye ait fotoğrafa erişim sunulması
+   - Aratılan her bölgeye ait fotoğrafa erişim sunulması,
    - Erişilen fotoğrafları duvar kağıdı yapma olanağı sağlanılması,
    - Harita aracılığıyla nerede olduğunu görme yardımı,
    - Yapay zeka ile sohbet imkanı olması.

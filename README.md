@@ -22,7 +22,7 @@ F59
 
    - Kullanıcılar, yolculukları sırasında gideceği yerlere ait fotoğrafları görebilir, gittikleri zamanda onlarda oraya ait fotoğraf ekleyebilir.
 
-### Uygulamanın birincil fonksiyonu:
+### Uygulamanın ikincil fonksiyonu:
 
    - Kullanıcılar, API'den gelen veya kendi ekledikleri fotoğrafları duvar kağıdı olarak ayarlayabilir.
      

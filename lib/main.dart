@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:oua_flutter_travel_gallery/views/bottom_nav.dart';
 import 'package:oua_flutter_travel_gallery/views/categories.dart';
 import 'package:oua_flutter_travel_gallery/views/home.dart';
+import 'package:oua_flutter_travel_gallery/views/onboarding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,13 +18,13 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Travel Gallery',
       theme: ThemeData(
       
         
         primarySwatch: Colors.blue,
       ),
-      home: const BottomNav(),
+      home: const OnboardingPage(),
     );
   }
 }

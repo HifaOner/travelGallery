@@ -1,9 +1,11 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:oua_flutter_travel_gallery/components/colors.dart';
+import 'package:oua_flutter_travel_gallery/views/explore.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Home extends StatefulWidget {
@@ -36,35 +38,142 @@ class _HomeState extends State<Home> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(bottom: 10.0),
-                child: Center(
-                  child: Row(
-                    // ICON - HEADING
-                    children: [
-                      Material(
-                          elevation: 0.5,
-                          borderRadius: BorderRadius.circular(60),
-                          child: Image.asset(
-                            "assets/images/user_icon.png",
-                            height: 50,
-                            width: 50,
-                            fit: BoxFit.cover,
-                          )),
-                      SizedBox(width: 100.0),
-                      Center(
-                        child: Text(
-                          "Home",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 25.0,
-                              //fontWeight: FontWeight.bold,
-                              fontFamily: "Poppins"),
-                        ),
+                padding: const EdgeInsets.only(bottom: 15.0),
+                child: Row(
+                  // ICON - HEADING
+                  children: [
+                    Text(
+                      "Home",
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Poppins"),
+                    ),
+                    Expanded(child: Container()),
+                    Icon(
+                      Icons.menu,
+                      size: 25,
+                    ),
+                  ],
+                ),
+              ),
+              //SizedBox(height: 5),
+              Row(
+                children: [
+                  Text(
+                    "Welcome!",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontFamily: "Roboto",
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromARGB(255, 63, 62, 62),
+                    ),
+                  ),
+                  Expanded(child: Container()),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Explore()));
+                    },
+                    child: Text(
+                      "Explore",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontFamily: "Roboto",
+                        color: AppColors.primaryColor,
                       ),
-                    ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_outlined,
+                    size: 20,
+                    color: AppColors.primaryColor,
+                  ),
+                ],
+              ),
+
+              // Blue Box
+              Padding(
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 120,
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          AppColors.primaryColor.withOpacity(1),
+                          AppColors.primaryColor.withOpacity(1),
+                        ],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
+                          topRight: Radius.circular(10)),
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(5, 10),
+                          blurRadius: 20,
+                          color: AppColors.primaryColor.withOpacity(0.2),
+                        ),
+                      ]),
+                  // Container Text
+                  child: Container(
+                    padding: EdgeInsets.only(left: 20, top: 20, right: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Start a Chat with AI and",
+                          style: TextStyle(
+                              fontFamily: "Roboto",
+                              fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.normal),
+                        ),
+                        SizedBox(
+                          height: 4,
+                        ),
+                        Text(
+                          "Say Where You Want to Go",
+                          style: TextStyle(
+                              fontFamily: "Roboto",
+                              fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.normal),
+                        ),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.chat_bubble_outline,
+                              size: 20,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "5 Question for Free",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Expanded(child: Container()),
+                            Icon(
+                              Icons.navigate_next_outlined,
+                              color: Colors.white,
+                              size: 40,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
+
               // CAROUSEL SLIDER
               CarouselSlider.builder(
                   itemCount: travelPhotos.length,
@@ -73,8 +182,8 @@ class _HomeState extends State<Home> {
                     return buildImage(res, index);
                   },
                   options: CarouselOptions(
-                      autoPlay: true,
-                      height: MediaQuery.of(context).size.height / 1.5,
+                      //autoPlay: true,
+                      height: MediaQuery.of(context).size.height / 1.8,
                       //viewportFraction: 1,
                       enlargeCenterPage: true,
                       enlargeStrategy: CenterPageEnlargeStrategy.height,

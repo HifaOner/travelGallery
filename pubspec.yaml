@@ -46,9 +46,15 @@ flutter:
      - family: Poppins
        fonts:
          - asset: assets/fonts/Poppins-SemiBold.ttf
+         - asset: assets/fonts/Poppins-Regular.ttf
      - family: Rowdies
        fonts:
          - asset:  assets/fonts/Rowdies-Regular.ttf
+     - family: Roboto
+       fonts:
+         - asset: assets/fonts/Roboto-Medium.ttf
+         - asset: assets/fonts/Roboto-MediumItalic.ttf
+         - asset: assets/fonts/Roboto-Regular.ttf
  
   uses-material-design: true
 

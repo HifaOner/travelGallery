@@ -16,9 +16,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   // DATA
   List travelPhotos = [
-    //"assets/images/bosnia.jpg",
+    "assets/images/bosnia.jpg",
     "assets/images/southeastern.jpg",
-    "assets/images/street_ist.jpg",
+    //"assets/images/street_ist.jpg",
     "assets/images/mosque_ist.jpg"
   ];
 

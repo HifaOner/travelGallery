@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:oua_flutter_travel_gallery/admin/admin_login.dart';
 import 'package:oua_flutter_travel_gallery/components/onboarding_data.dart';
-import 'package:oua_flutter_travel_gallery/views/bottom_nav.dart';
 import 'package:path/path.dart' as Path;
 
 class OnboardingPage extends StatefulWidget {
@@ -135,7 +135,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
   Navigator.push(
     this.context,
     MaterialPageRoute(
-      builder: (context) => const BottomNav(),
+      builder: (context) => const AdminLogin(),
     ),
   );
 }

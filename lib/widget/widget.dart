@@ -4,7 +4,7 @@ import 'package:oua_flutter_travel_gallery/models/photo_model.dart';
 
 Widget wallpaper(List<PhotosModel> listPhotos, BuildContext context){
   return Container(
-    padding: EdgeInsets.all(4.0),
+    padding: const EdgeInsets.all(4.0),
     child: GridView.count
     (crossAxisCount: 2,
     childAspectRatio: 0.6,

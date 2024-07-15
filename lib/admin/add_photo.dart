@@ -1,8 +1,11 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:oua_flutter_travel_gallery/components/colors.dart';
 
 class AddPhoto extends StatefulWidget {
@@ -23,6 +26,14 @@ class _AddPhotoState extends State<AddPhoto> {
     "Southeastern"
   ];
   String? value;
+  File? selectedImage;
+  final _picker = ImagePicker();
+
+  Future getImage() async {
+    var image = await _picker.pickImage(source: ImageSource.gallery);
+    selectedImage = File(image!.path);
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,25 +64,53 @@ class _AddPhotoState extends State<AddPhoto> {
             SizedBox(
               height: 20,
             ),
-            Center(
-              child: Material(
-                elevation: 4.0,
-                borderRadius: BorderRadius.circular(20.0),
-                child: Container(
-                  width: 250,
-                  height: 300,
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 1.5,color: AppColors.primaryColor),
-                    borderRadius: BorderRadius.circular(20.0),
-                    
+            selectedImage == null
+                ? GestureDetector(
+                    onTap: () {
+                      getImage();
+                    },
+                    child: Center(
+                      child: Material(
+                        elevation: 4.0,
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Container(
+                          width: 250,
+                          height: 300,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                width: 1.5, color: AppColors.primaryColor),
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          child: Icon(
+                            Icons.camera_alt_outlined,
+                            color: AppColors.primaryColor,
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                : Center(
+                    child: Material(
+                      elevation: 4.0,
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Container(
+                        width: 250,
+                        height: 300,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1.5, color: AppColors.primaryColor),
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.file(
+                            selectedImage!,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
-                  child: Icon(
-                    Icons.camera_alt_outlined,
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-              ),
-            ),
             SizedBox(
               height: 20,
             ),

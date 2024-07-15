@@ -45,14 +45,14 @@ class _HomeState extends State<Home> {
                     Text(
                       "Home",
                       style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 28,
                           fontWeight: FontWeight.bold,
                           fontFamily: "Poppins"),
                     ),
                     Expanded(child: Container()),
                     Icon(
                       Icons.menu,
-                      size: 25,
+                      size: 28,
                     ),
                   ],
                 ),
@@ -79,6 +79,7 @@ class _HomeState extends State<Home> {
                       style: TextStyle(
                         fontSize: 15,
                         fontFamily: "Roboto",
+                        fontWeight: FontWeight.w500,
                         color: AppColors.primaryColor,
                       ),
                     ),
@@ -93,10 +94,10 @@ class _HomeState extends State<Home> {
 
               // Blue Box
               Padding(
-                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                padding: const EdgeInsets.only(top: 10, bottom: 15),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 120,
+                  height: 130,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
@@ -133,7 +134,7 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.normal),
                         ),
                         SizedBox(
-                          height: 4,
+                          height: 5,
                         ),
                         Text(
                           "Say Where You Want to Go",
@@ -143,6 +144,7 @@ class _HomeState extends State<Home> {
                               color: Colors.white,
                               fontWeight: FontWeight.normal),
                         ),
+                        SizedBox(height: 5,),
                         Row(
                           children: [
                             Icon(
@@ -183,7 +185,7 @@ class _HomeState extends State<Home> {
                   },
                   options: CarouselOptions(
                       //autoPlay: true,
-                      height: MediaQuery.of(context).size.height / 1.8,
+                      height: MediaQuery.of(context).size.height / 1.9,
                       //viewportFraction: 1,
                       enlargeCenterPage: true,
                       enlargeStrategy: CenterPageEnlargeStrategy.height,

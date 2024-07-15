@@ -38,7 +38,7 @@ class _BottomNavState extends State<BottomNav> {
     adminLogin = AdminLogin();
     addPhoto = AddPhoto();
     chat = Chat();
-    pages = [home, explore, adminLogin, categories, chat];
+    pages = [home, explore, addPhoto, categories, chat];
     currentPage = Home();
     super.initState();
   }

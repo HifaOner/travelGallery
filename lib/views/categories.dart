@@ -28,12 +28,12 @@ class _CategoriesState extends State<Categories> {
                   "Categories",
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 25.0,
-                      //fontWeight: FontWeight.bold,
+                      fontSize: 28.0,
+                      fontWeight: FontWeight.bold,
                       fontFamily: "Poppins"),
                 ),
               ),
-              SizedBox(height: 20.0),
+              SizedBox(height: 15.0),
               // Anatolia
               Container(
                 margin: EdgeInsets.only(left: 20, right: 20, bottom: 10),

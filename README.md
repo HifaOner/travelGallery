@@ -2,7 +2,7 @@
 
 F59
 
-### Takım Eelemanları
+### Takım Elemanları
   - Hifanur Öner : Product Owner / Developer
   - Esad İkbal Çelik : Scrum Master
   - Fatih Karakaya : Team Member / Developer

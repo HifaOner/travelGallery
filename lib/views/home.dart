@@ -208,7 +208,7 @@ class _HomeState extends State<Home> {
         activeIndex: activeIndex,
         count: 3,
         effect: SlideEffect(
-            dotWidth: 15, dotHeight: 15, activeDotColor: Colors.blue),
+            dotWidth: 13, dotHeight: 13, activeDotColor: Colors.blue),
       );
 
   // PHOTO WIDGET

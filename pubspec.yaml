@@ -1,6 +1,8 @@
 name: oua_flutter_travel_gallery
 description: Travel Gallery is a mobile application prepared with flutter for Bootcamp 2024 of OUA.
 
+before_install: 
+- yes | sdkmanager "platforms;android-30"
 
 publish_to: 'none' 
 
@@ -30,6 +32,8 @@ dependencies:
   image_picker: ^1.0.2
   image_gallery_saver: ^2.0.3
   dio: ^5.5.0+1
+
+
 
 dev_dependencies:
   flutter_test:

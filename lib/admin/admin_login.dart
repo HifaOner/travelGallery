@@ -44,7 +44,7 @@ class _AdminLoginState extends State<AdminLogin> {
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 30,
-                            //fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.bold,
                             fontFamily: "Poppins"),
                       ),
                       Center(

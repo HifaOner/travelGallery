@@ -1,9 +1,13 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, use_full_hex_values_for_flutter_colors, prefer_const_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables, use_full_hex_values_for_flutter_colors, prefer_const_constructors, use_build_context_synchronously
+
+import 'dart:typed_data';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
 
 class FullScreen extends StatefulWidget {
   @override
@@ -39,8 +43,7 @@ class _FullScreenState extends State<FullScreen> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        
-
+                        _save();
                       },
                       child: Container(
                         height: 70,
@@ -95,5 +98,14 @@ class _FullScreenState extends State<FullScreen> {
             ))
       ]),
     );
+  }
+
+  _save() async {
+    var response = await Dio().get(widget.imagepath,
+        options: Options(responseType: ResponseType.bytes));
+    final result =
+        await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
+    //print(result);
+    Navigator.pop(context);
   }
 }

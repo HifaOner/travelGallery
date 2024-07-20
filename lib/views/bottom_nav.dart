@@ -6,7 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:oua_flutter_travel_gallery/admin/add_photo.dart';
 import 'package:oua_flutter_travel_gallery/admin/admin_login.dart';
 import 'package:oua_flutter_travel_gallery/views/categories.dart';
-import 'package:oua_flutter_travel_gallery/views/chat.dart';
+import 'package:oua_flutter_travel_gallery/views/location.dart';
 import 'package:oua_flutter_travel_gallery/views/explore.dart';
 import 'package:oua_flutter_travel_gallery/views/home.dart';
 
@@ -27,7 +27,7 @@ class _BottomNavState extends State<BottomNav> {
   late Home home;
   late Categories categories;
   late Explore explore;
-  late Chat chat;
+  late Location location;
   late Widget currentPage;
 
   @override
@@ -37,8 +37,8 @@ class _BottomNavState extends State<BottomNav> {
     categories = Categories();
     adminLogin = AdminLogin();
     addPhoto = AddPhoto();
-    chat = Chat();
-    pages = [home, explore, addPhoto, categories, chat];
+    location = Location();
+    pages = [home, explore, addPhoto, categories, location];
     currentPage = Home();
     super.initState();
   }
@@ -72,8 +72,8 @@ class _BottomNavState extends State<BottomNav> {
             label: 'Category',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat_bubble_outline),
-            label: 'Chat',
+            icon: Icon(Icons.location_on_outlined),
+            label: 'Location',
           ),
         ],
         currentIndex: currentTabIndex,

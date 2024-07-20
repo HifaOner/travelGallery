@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:oua_flutter_travel_gallery/admin/add_photo.dart';
 import 'package:oua_flutter_travel_gallery/views/bottom_nav.dart';
+import 'package:oua_flutter_travel_gallery/views/location.dart';
 import 'package:oua_flutter_travel_gallery/views/onboarding.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OnboardingPage(),
+      home: const BottomNav(),
     );
   }
 }

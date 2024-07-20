@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const primaryColor = Color.fromARGB(255, 48, 145, 201);
+  static const primaryColor = Color(0xff2b83e6);
 }

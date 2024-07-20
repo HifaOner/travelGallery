@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:oua_flutter_travel_gallery/components/colors.dart';
 import 'package:oua_flutter_travel_gallery/views/bottom_nav.dart';
 
 class AdminLogin extends StatefulWidget {
@@ -136,8 +137,7 @@ class _AdminLoginState extends State<AdminLogin> {
                                       style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStatePropertyAll<Color>(
-                                                  Color.fromARGB(
-                                                      255, 48, 145, 201))),
+                                                  AppColors.primaryColor)),
                                       onPressed: () {},
                                       child: Text(
                                         "Login",
@@ -153,7 +153,7 @@ class _AdminLoginState extends State<AdminLogin> {
                                     width: MediaQuery.of(context).size.width,
                                     child: OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: Colors.blue)),
+                                          side: BorderSide(color: AppColors.primaryColor)),
                                       onPressed: () {
                                         Navigator.push(context, MaterialPageRoute(builder: ((context) => BottomNav())));
                                       },
@@ -176,8 +176,8 @@ class _AdminLoginState extends State<AdminLogin> {
                         height: 20,
                       ),
                       SignInButton(Buttons.Google, onPressed: () {}),
-                      SignInButton(Buttons.Facebook, onPressed: () {}),
-                      //SignInButton(Buttons.Pinterest, onPressed: () {}),
+                      //SignInButton(Buttons.Facebook, onPressed: () {}),
+                      SignInButton(Buttons.Pinterest, onPressed: () {}),
                     ],
                   )),
             )

@@ -3,18 +3,18 @@ import 'package:oua_flutter_travel_gallery/components/onboarding_info.dart';
 class OnboardingData{
   List<OnboardingInfo> items = [
     OnboardingInfo(
-      title: "Travel World",
-      description: "Share your photos and discover photos taken by other travelers.",
+      title: "Travel Gallery",
+      description: "Save photos in the travel gallery by categories.",
       image: "assets/images/agra.gif",
   ),
   OnboardingInfo(
-      title: "Share Photos",
-      description: "Share your photos and discover photos taken by other travelers.",
+      title: "Explore Photos",
+      description: "Explore photos shared by other travellers",
       image: "assets/images/focus.gif",
   ),
   OnboardingInfo(
-      title: "Find Your Location",
-      description: "Share your photos and discover photos taken by other travelers.",
+      title: "Find Location",
+      description: "Find your location easily wherever you go.",
       image: "assets/images/location.gif",
   ),
 

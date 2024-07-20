@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:oua_flutter_travel_gallery/components/colors.dart';
+import 'package:oua_flutter_travel_gallery/views/categories.dart';
 import 'package:oua_flutter_travel_gallery/views/explore.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -18,10 +19,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   // DATA
   List travelPhotos = [
-    "assets/images/bosnia.jpg",
+    //"assets/images/bosnia.jpg",
+    "assets/images/mosque_ist.jpg",
     "assets/images/southeastern.jpg",
-    //"assets/images/street_ist.jpg",
-    "assets/images/mosque_ist.jpg"
+    "assets/images/street_ist.jpg",
+    //"assets/images/mosque_ist.jpg"
   ];
 
   int activeIndex = 0; // SmoothIndicator
@@ -71,8 +73,9 @@ class _HomeState extends State<Home> {
                   ),
                   Expanded(child: Container()),
                   GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Explore()));
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Explore()));
                     },
                     child: Text(
                       "Explore",
@@ -101,8 +104,8 @@ class _HomeState extends State<Home> {
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          AppColors.primaryColor.withOpacity(1),
-                          AppColors.primaryColor.withOpacity(1),
+                          AppColors.primaryColor,
+                          Color.fromARGB(255, 33, 113, 204).withOpacity(1),
                         ],
                         begin: Alignment.bottomLeft,
                         end: Alignment.centerRight,
@@ -126,7 +129,7 @@ class _HomeState extends State<Home> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Start a Chat with AI and",
+                          "Visit Regions in Turkey and",
                           style: TextStyle(
                               fontFamily: "Roboto",
                               fontSize: 20,
@@ -137,18 +140,20 @@ class _HomeState extends State<Home> {
                           height: 5,
                         ),
                         Text(
-                          "Say Where You Want to Go",
+                          "Save Photos to Travel Gallery.",
                           style: TextStyle(
                               fontFamily: "Roboto",
                               fontSize: 20,
                               color: Colors.white,
                               fontWeight: FontWeight.normal),
                         ),
-                        SizedBox(height: 5,),
+                        SizedBox(
+                          height: 5,
+                        ),
                         Row(
                           children: [
                             Icon(
-                              Icons.chat_bubble_outline,
+                              Icons.category_outlined,
                               size: 20,
                               color: Colors.white,
                             ),
@@ -156,17 +161,25 @@ class _HomeState extends State<Home> {
                               width: 10,
                             ),
                             Text(
-                              "5 Question for Free",
+                              "7 Qategories for Free",
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.white,
                               ),
                             ),
                             Expanded(child: Container()),
-                            Icon(
-                              Icons.navigate_next_outlined,
-                              color: Colors.white,
-                              size: 40,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Categories()));
+                              },
+                              child: Icon(
+                                Icons.navigate_next_outlined,
+                                color: Colors.white,
+                                size: 40,
+                              ),
                             ),
                           ],
                         ),
@@ -208,7 +221,9 @@ class _HomeState extends State<Home> {
         activeIndex: activeIndex,
         count: 3,
         effect: SlideEffect(
-            dotWidth: 13, dotHeight: 13, activeDotColor: Colors.blue),
+            dotWidth: 13,
+            dotHeight: 13,
+            activeDotColor: AppColors.primaryColor),
       );
 
   // PHOTO WIDGET

@@ -7,6 +7,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:oua_flutter_travel_gallery/components/colors.dart';
+import 'package:oua_flutter_travel_gallery/views/bottom_nav.dart';
+import 'package:oua_flutter_travel_gallery/views/home.dart';
 
 class AddPhoto extends StatefulWidget {
   const AddPhoto({super.key});
@@ -45,8 +47,15 @@ class _AddPhotoState extends State<AddPhoto> {
             Padding(
               padding: const EdgeInsets.only(left: 8),
               child: Row(
-                children: const [
-                  Icon(Icons.arrow_back_ios_new_outlined),
+                children: [
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BottomNav()));
+                      },
+                      child: Icon(Icons.arrow_back_ios_new_outlined)),
                   SizedBox(width: 90),
                   Center(
                     child: Text(
@@ -71,10 +80,11 @@ class _AddPhotoState extends State<AddPhoto> {
                     },
                     child: Center(
                       child: Material(
-                        elevation: 4.0,
+                        elevation: 0.0,
                         borderRadius: BorderRadius.circular(20.0),
                         child: Container(
-                          width: 250,
+                          margin: EdgeInsets.only(left: 40, right: 40),
+                          width: MediaQuery.of(context).size.width,
                           height: 300,
                           decoration: BoxDecoration(
                             border: Border.all(
@@ -112,37 +122,45 @@ class _AddPhotoState extends State<AddPhoto> {
                     ),
                   ),
             SizedBox(
-              height: 20,
+              height: 30,
             ),
-            Container(
-              margin: EdgeInsets.only(left: 20, right: 20),
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(10)),
-              child: DropdownButtonHideUnderline(
-                  child: DropdownButton<String>(
-                items: categoryitems
-                    .map((item) => DropdownMenuItem<String>(
-                          value: item,
-                          child: Text(
-                            item,
-                            style: TextStyle(
-                                fontFamily: "Roboto",
-                                fontWeight: FontWeight.normal),
-                          ),
-                        ))
-                    .toList(),
-                onChanged: ((value) => setState(() {
-                      this.value = value;
-                    })),
-                hint: Text(
-                  "Select Category",
-                  style: TextStyle(
-                      fontFamily: "Roboto", fontWeight: FontWeight.w500),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Material(
+                elevation: 1.0,
+                
+                child: Container(
+                  //margin: EdgeInsets.only(left: 20, right: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  width: MediaQuery.of(context).size.width,
+                  height: 50,
+                  decoration: BoxDecoration(
+                      color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                  child: DropdownButtonHideUnderline(
+                      child: DropdownButton<String>(
+                    items: categoryitems
+                        .map((item) => DropdownMenuItem<String>(
+                              value: item,
+                              child: Text(
+                                item,
+                                style: TextStyle(
+                                    fontFamily: "Roboto",
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ))
+                        .toList(),
+                    onChanged: ((value) => setState(() {
+                          this.value = value;
+                        })),
+                    hint: Text(
+                      "Select Category",
+                      style: TextStyle(
+                          fontFamily: "Roboto", fontWeight: FontWeight.w500),
+                    ),
+                    value: value,
+                  )),
                 ),
-                value: value,
-              )),
+              ),
             ),
             SizedBox(
               height: 40,
@@ -153,10 +171,11 @@ class _AddPhotoState extends State<AddPhoto> {
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 20.0),
                     width: MediaQuery.of(context).size.width,
+                    height: 40,
                     child: ElevatedButton(
                       style: ButtonStyle(
                           backgroundColor: MaterialStatePropertyAll<Color>(
-                              Color.fromARGB(255, 48, 145, 201))),
+                              AppColors.primaryColor)),
                       onPressed: () {},
                       child: Text(
                         "Add",

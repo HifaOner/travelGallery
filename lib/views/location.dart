@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:oua_flutter_travel_gallery/components/colors.dart';
 
 class Location extends StatefulWidget {
   const Location({super.key});
@@ -26,10 +27,10 @@ class _LocationState extends State<Location> {
   double lat = 0.0;
   double long = 0.0;
 
-  // 39.9032594,32.5976162,11z
+  // 41.0052036,28.8470311
 
   var firstLocation =
-      const CameraPosition(target: LatLng(39.9032594, 32.5976162), zoom: 11);
+      const CameraPosition(target: LatLng(41.0052036, 28.8470311), zoom: 9);
 
   List<Marker> markers = <Marker>[];
 
@@ -48,9 +49,9 @@ class _LocationState extends State<Location> {
     var lastLocation = CameraPosition(target: LatLng(lat, long), zoom: 9);
 
     var locationMarker = Marker(
-      markerId: MarkerId("id"),
+      markerId: const MarkerId("id"),
       position: LatLng(lat, long),
-      infoWindow: InfoWindow(title: "Location", snippet: ""),
+      infoWindow: const InfoWindow(title: "Location", snippet: ""),
     );
 
     setState(() {
@@ -85,22 +86,33 @@ class _LocationState extends State<Location> {
                   Padding(
                     padding: const EdgeInsets.only(top: 650),
                     child: Center(
-                      child: Container(
-                        margin: const EdgeInsets.symmetric(vertical: 20),
-                        width: MediaQuery.of(this.context).size.width * .5,
-                        height: 45,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: const Color.fromARGB(255, 48, 145, 201),
-                        ),
-                        child: TextButton(
-                          onPressed: () {
-                            goLocation();
-                          },
-                          child: const Text(
-                            "See Current Location",
-                            style: TextStyle(color: Colors.white),
-                          ),
+                      child: GestureDetector(
+                        onTap: () {
+                          goLocation();
+                        },
+                        child: Container(
+                          height: 50,
+                          width: MediaQuery.of(context).size.width / 1.9,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: AppColors.primaryColor, width: 2),
+                              borderRadius: BorderRadius.circular(30),
+                              gradient: const LinearGradient(colors: [
+                                Color.fromARGB(54, 255, 255, 255),
+                                Color.fromARGB(146, 223, 215, 215)
+                              ])),
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  "See Current Location",
+                                  style: TextStyle(
+                                      fontSize: 16.0,
+                                      color: AppColors.primaryColor,
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ]),
                         ),
                       ),
                     ),

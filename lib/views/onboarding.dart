@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:oua_flutter_travel_gallery/admin/admin_login.dart';
+import 'package:oua_flutter_travel_gallery/components/colors.dart';
 import 'package:oua_flutter_travel_gallery/components/onboarding_data.dart';
 import 'package:path/path.dart' as Path;
 
@@ -13,7 +14,6 @@ class OnboardingPage extends StatefulWidget {
 }
 
 class _OnboardingPageState extends State<OnboardingPage> {
-
   final controller = OnboardingData();
   final pageController = PageController();
   int currentIndex = 0;
@@ -56,17 +56,17 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             fontSize: 25,
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 48, 145, 201)),
+                            color: AppColors.primaryColor),
                         textAlign: TextAlign.center,
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: Text(
                           controller.items[currentIndex].description,
                           style: const TextStyle(
                               color: Color.fromARGB(255, 182, 178, 178),
                               fontFamily: "Poppins",
-                              fontSize: 17),
+                              fontSize: 19),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -91,7 +91,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 margin: const EdgeInsets.symmetric(horizontal: 2),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
-                  color: currentIndex == index ? Colors.blue : Colors.grey,
+                  color: currentIndex == index
+                      ? AppColors.primaryColor
+                      : Colors.grey,
                 ),
                 height: 7,
                 width: currentIndex == index ? 30 : 7,
@@ -108,35 +110,35 @@ class _OnboardingPageState extends State<OnboardingPage> {
       height: 55,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: const Color.fromARGB(255, 48, 145, 201),
+        color: Color(0xff2b83e6),
       ),
-      
       child: TextButton(
-        onPressed: (){
+        onPressed: () {
           setState(() {
-            if(
-            currentIndex != controller.items.length -1) {currentIndex++;}
-            else {
+            if (currentIndex != controller.items.length - 1) {
+              currentIndex++;
+            } else {
               navigateToNextScreen();
-            };
+            }
+            ;
           });
         },
-        child: Text(currentIndex == controller.items.length - 1
-            ? "Get Started"
-            : "Continue",
-            style: const TextStyle(color: Colors.white),),
+        child: Text(
+          currentIndex == controller.items.length - 1
+              ? "Get Started"
+              : "Continue",
+          style: const TextStyle(color: Colors.white),
+        ),
       ),
     );
   }
 
-
-
   void navigateToNextScreen() {
-  Navigator.push(
-    this.context,
-    MaterialPageRoute(
-      builder: (context) => const AdminLogin(),
-    ),
-  );
-}
+    Navigator.push(
+      this.context,
+      MaterialPageRoute(
+        builder: (context) => const AdminLogin(),
+      ),
+    );
+  }
 }

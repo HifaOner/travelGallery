@@ -35,7 +35,7 @@ class _AdminLoginState extends State<AdminLogin> {
                       fit: BoxFit.cover)),
             ),
             Container(
-              margin: EdgeInsets.only(left: 30, right: 30, top: 90),
+              margin: EdgeInsets.only(left: 30, right: 30, top: 95),
               child: Form(
                   key: _formkey,
                   child: Column(
@@ -44,7 +44,7 @@ class _AdminLoginState extends State<AdminLogin> {
                         "Join Us!",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 30,
+                            fontSize: 35,
                             fontWeight: FontWeight.bold,
                             fontFamily: "Poppins"),
                       ),
@@ -137,7 +137,7 @@ class _AdminLoginState extends State<AdminLogin> {
                                       style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStatePropertyAll<Color>(
-                                                  AppColors.primaryColor)),
+                                                  AppColors.secondColor)),
                                       onPressed: () {},
                                       child: Text(
                                         "Login",
@@ -153,15 +153,19 @@ class _AdminLoginState extends State<AdminLogin> {
                                     width: MediaQuery.of(context).size.width,
                                     child: OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                          side: BorderSide(color: AppColors.primaryColor)),
+                                          side: BorderSide(
+                                              color: AppColors.secondColor)),
                                       onPressed: () {
-                                        Navigator.push(context, MaterialPageRoute(builder: ((context) => BottomNav())));
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: ((context) =>
+                                                    BottomNav())));
                                       },
                                       child: Text(
                                         "Continue as guest",
                                         style: TextStyle(
-                                          color:
-                                              Color.fromARGB(255, 48, 145, 201),
+                                          color: AppColors.secondColor,
                                         ),
                                       ),
                                     ),

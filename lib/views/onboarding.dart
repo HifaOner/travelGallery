@@ -56,7 +56,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             fontSize: 25,
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.bold,
-                            color: AppColors.primaryColor),
+                            color: AppColors.secondColor),
                         textAlign: TextAlign.center,
                       ),
                       Padding(
@@ -92,7 +92,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
                   color: currentIndex == index
-                      ? AppColors.primaryColor
+                      ? AppColors.secondColor
                       : Colors.grey,
                 ),
                 height: 7,
@@ -110,7 +110,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       height: 55,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: Color(0xff2b83e6),
+        color: AppColors.secondColor,
       ),
       child: TextButton(
         onPressed: () {

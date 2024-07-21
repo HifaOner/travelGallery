@@ -83,17 +83,17 @@ class _AddPhotoState extends State<AddPhoto> {
                         elevation: 0.0,
                         borderRadius: BorderRadius.circular(20.0),
                         child: Container(
-                          margin: EdgeInsets.only(left: 40, right: 40),
+                          margin: EdgeInsets.symmetric(horizontal: 20),
                           width: MediaQuery.of(context).size.width,
-                          height: 300,
+                          height: 400,
                           decoration: BoxDecoration(
                             border: Border.all(
-                                width: 1.5, color: AppColors.primaryColor),
+                                width: 1.5, color: AppColors.secondColor),
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                           child: Icon(
                             Icons.camera_alt_outlined,
-                            color: AppColors.primaryColor,
+                            color: AppColors.secondColor,
                           ),
                         ),
                       ),
@@ -101,14 +101,15 @@ class _AddPhotoState extends State<AddPhoto> {
                   )
                 : Center(
                     child: Material(
-                      elevation: 4.0,
+                      elevation: 0.0,
                       borderRadius: BorderRadius.circular(20.0),
                       child: Container(
-                        width: 250,
-                        height: 300,
+                        margin: EdgeInsets.symmetric(horizontal: 20),
+                        width: MediaQuery.of(context).size.width,
+                        height: 400,
                         decoration: BoxDecoration(
                           border: Border.all(
-                              width: 1.5, color: AppColors.primaryColor),
+                              width: 1.5, color: AppColors.secondColor),
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                         child: ClipRRect(
@@ -128,14 +129,14 @@ class _AddPhotoState extends State<AddPhoto> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Material(
                 elevation: 1.0,
-                
                 child: Container(
                   //margin: EdgeInsets.only(left: 20, right: 20),
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   width: MediaQuery.of(context).size.width,
                   height: 50,
                   decoration: BoxDecoration(
-                      color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10)),
                   child: DropdownButtonHideUnderline(
                       child: DropdownButton<String>(
                     items: categoryitems
@@ -175,7 +176,7 @@ class _AddPhotoState extends State<AddPhoto> {
                     child: ElevatedButton(
                       style: ButtonStyle(
                           backgroundColor: MaterialStatePropertyAll<Color>(
-                              AppColors.primaryColor)),
+                              AppColors.secondColor)),
                       onPressed: () {},
                       child: Text(
                         "Add",

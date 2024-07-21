@@ -95,7 +95,7 @@ class _LocationState extends State<Location> {
                           width: MediaQuery.of(context).size.width / 1.9,
                           decoration: BoxDecoration(
                               border: Border.all(
-                                  color: AppColors.primaryColor, width: 2),
+                                  color: AppColors.secondColor, width: 2),
                               borderRadius: BorderRadius.circular(30),
                               gradient: const LinearGradient(colors: [
                                 Color.fromARGB(54, 255, 255, 255),
@@ -108,7 +108,7 @@ class _LocationState extends State<Location> {
                                   "See Current Location",
                                   style: TextStyle(
                                       fontSize: 16.0,
-                                      color: AppColors.primaryColor,
+                                      color: AppColors.secondColor,
                                       fontFamily: "Poppins",
                                       fontWeight: FontWeight.bold),
                                 ),

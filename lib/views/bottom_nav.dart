@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:oua_flutter_travel_gallery/admin/add_photo.dart';
 import 'package:oua_flutter_travel_gallery/admin/admin_login.dart';
+import 'package:oua_flutter_travel_gallery/components/colors.dart';
 import 'package:oua_flutter_travel_gallery/views/categories.dart';
 import 'package:oua_flutter_travel_gallery/views/location.dart';
 import 'package:oua_flutter_travel_gallery/views/explore.dart';
@@ -78,7 +79,7 @@ class _BottomNavState extends State<BottomNav> {
         ],
         currentIndex: currentTabIndex,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Color.fromARGB(255, 48, 145, 201), 
+        selectedItemColor: AppColors.secondColor, 
         unselectedItemColor: Colors.grey, 
       ),
       body: pages[currentTabIndex],

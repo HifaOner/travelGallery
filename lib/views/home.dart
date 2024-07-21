@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:oua_flutter_travel_gallery/admin/add_photo.dart';
 import 'package:oua_flutter_travel_gallery/components/colors.dart';
 import 'package:oua_flutter_travel_gallery/views/categories.dart';
 import 'package:oua_flutter_travel_gallery/views/explore.dart';
@@ -19,11 +20,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   // DATA
   List travelPhotos = [
-    //"assets/images/bosnia.jpg",
-    "assets/images/mosque_ist.jpg",
-    "assets/images/southeastern.jpg",
-    "assets/images/street_ist.jpg",
-    //"assets/images/mosque_ist.jpg"
+    //"assets/images/capo.jpg",
+    "assets/images/ist.jpg",
+    "assets/images/mardin.jpg",
+    "assets/images/lighthouse.jpg",
+    
   ];
 
   int activeIndex = 0; // SmoothIndicator
@@ -83,14 +84,14 @@ class _HomeState extends State<Home> {
                         fontSize: 15,
                         fontFamily: "Roboto",
                         fontWeight: FontWeight.w500,
-                        color: AppColors.primaryColor,
+                        color: AppColors.secondColor,
                       ),
                     ),
                   ),
                   Icon(
                     Icons.arrow_forward_outlined,
                     size: 20,
-                    color: AppColors.primaryColor,
+                    color: AppColors.secondColor,
                   ),
                 ],
               ),
@@ -104,8 +105,8 @@ class _HomeState extends State<Home> {
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          AppColors.primaryColor,
-                          Color.fromARGB(255, 33, 113, 204).withOpacity(1),
+                          Color.fromARGB(255, 18, 149, 224),
+                          AppColors.secondColor.withOpacity(0.8),
                         ],
                         begin: Alignment.bottomLeft,
                         end: Alignment.centerRight,
@@ -129,7 +130,7 @@ class _HomeState extends State<Home> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Visit Regions in Turkey and",
+                          "Visit Turkey This Summer and",
                           style: TextStyle(
                               fontFamily: "Roboto",
                               fontSize: 20,
@@ -140,7 +141,7 @@ class _HomeState extends State<Home> {
                           height: 5,
                         ),
                         Text(
-                          "Save Photos to Travel Gallery.",
+                          "Add Your Photos to Travel Gallery",
                           style: TextStyle(
                               fontFamily: "Roboto",
                               fontSize: 20,
@@ -173,7 +174,7 @@ class _HomeState extends State<Home> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Categories()));
+                                        builder: (context) => AddPhoto()));
                               },
                               child: Icon(
                                 Icons.navigate_next_outlined,
@@ -221,14 +222,12 @@ class _HomeState extends State<Home> {
         activeIndex: activeIndex,
         count: 3,
         effect: SlideEffect(
-            dotWidth: 13,
-            dotHeight: 13,
-            activeDotColor: AppColors.primaryColor),
+            dotWidth: 13, dotHeight: 13, activeDotColor: AppColors.secondColor),
       );
 
   // PHOTO WIDGET
   Widget buildImage(String urlImage, int index) => Container(
-        margin: EdgeInsets.only(left: 20),
+        margin: EdgeInsets.only(left: 5, right: 5),
         height: MediaQuery.of(context).size.height / 1.5,
         width: MediaQuery.of(context).size.width,
         child: ClipRRect(

@@ -5,17 +5,17 @@ class OnboardingData{
     OnboardingInfo(
       title: "Travel Gallery",
       description: "Save photos in the travel gallery by categories.",
-      image: "assets/images/agra.gif",
+      image: "assets/images/girls.gif",
   ),
   OnboardingInfo(
       title: "Explore Photos",
       description: "Explore photos shared by other travellers",
-      image: "assets/images/focus.gif",
+      image: "assets/images/photo.gif",
   ),
   OnboardingInfo(
       title: "Find Location",
       description: "Find your location easily wherever you go.",
-      image: "assets/images/location.gif",
+      image: "assets/images/current_loc.gif",
   ),
 
   ];

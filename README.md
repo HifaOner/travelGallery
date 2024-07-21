@@ -110,7 +110,7 @@ F59
      ![WhatsApp Görsel 2024-07-21 saat 14 21 02_210db1df](https://github.com/user-attachments/assets/17baea81-94a8-4ee2-83f8-1c3cfc76117a)
 
    - Sprint Review:
-       - Alınan kararlar: Tüm UX hedefleri tamamlandı ve uygulamaya entegre edildi.
+       - Tüm UX hedefleri tamamlandı ve uygulamaya entegre edildi.
        - UI tasarımı tamamlandı ve ekip üyelerinden onay alındı.
        - Uygulamanın temel işlevleri başarıyla geliştirildi.
        - Firestore hatası çözülemedi.

@@ -16,7 +16,7 @@ F59
 
 ## Ürün Açıklaması
 
-   - Travel Gallery, seyahat tutkunlarının, profesyonel veya acemi fotoğrafçıların ve kendine gezi rotası oluşturmak isteyen kişilere kategorisel olarak ayrılmış mekanları göstermeye, onlarında bu mekanlara ait çektiği fotoğrafları eklemeye yardımcı olmak amacıyla hazırlanmıştır.
+   - Travel Gallery, seyahat tutkunlarının, profesyonel veya acemi fotoğrafçıların ve kendine gezi rotası oluşturmak isteyen kişilere gitmek istenen ya da merak edilen mekanları ait fotoğrafları göstermeye, sevilen fotoğrafları duvar kağıdı olarak ayarlayabilmeye, onlarında bu mekanlara ait çektiği fotoğrafları kategorisel olarak galeriye eklemesine yardımcı olmak amacıyla hazırlanmıştır.
 
 ### Uygulamanın birincil fonksiyonu:
 
@@ -32,6 +32,18 @@ F59
    - Erişilen fotoğrafları duvar kağıdı yapma olanağı sağlanılması,
    - Belirlenen kategorilere göre kullanıcının kendi fotoğraflarını yükleyebilmesi,
    - Google Maps ile bulunduğu konumu her an görebilmesi.
+
+## Kullanılan Teknolojiler
+   - path_provider
+   - carousel_slider
+   - smooth_page_indicator
+   - http
+   - cached_network_image
+   - image_picker:
+   - image_gallery_saver
+   - dio:
+   - google_maps_flutter
+   - geolocator
 
 ## Product Backlog URL
 

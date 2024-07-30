@@ -1,10 +1,12 @@
+![Modern App Portfolio Mockup Presentation](https://github.com/user-attachments/assets/3145f9eb-b037-4431-aa34-0603c6400e4e)
+
 # Takım İsmi
 
 F59
 
 ### Takım Elemanları
   - Hifanur Öner : Product Owner / Developer
-  - Esad İkbal Çelik : Scrum Master
+  - Esad İkbal Çelik : Scrum Master / Developer
   - Fatih Karakaya : Team Member / Developer
   
  
@@ -39,9 +41,9 @@ F59
    - smooth_page_indicator
    - http
    - cached_network_image
-   - image_picker:
+   - image_picker
    - image_gallery_saver
-   - dio:
+   - dio
    - google_maps_flutter
    - geolocator
 
@@ -135,5 +137,48 @@ F59
     
   - Product Backlog URL
       - https://trello.com/invite/b/66743ecc0e37401fcc914940/ATTI73a7ce3ef0f9b586d0e015e5782d5aa19DAD44AF/bootcamp-f59-sprint-2
+        
+
+# Sprint 3
+
+   - Sprint içinde tamamlanması tahmin edilen puan: 120 Puan
+
+   - Daily Scrum: Daily Scrum toplantılarının Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır.
+
+   - Sprint board update: Sprint board screenshotları:
+     
+     ![sprint 3](https://github.com/user-attachments/assets/d4196fd2-fdca-4ff8-909f-df086449b61f)
+     
+     
+   - Ürün Durumu: Map sayfası ve Ürün Tanıtım Youtube Link
+
+     ![15](https://github.com/user-attachments/assets/4d0c31b6-504a-4b4c-b5ff-85584582aace)
+     ![16](https://github.com/user-attachments/assets/2e612d77-d906-4723-aa63-8a7c1475298c)
+
+     
+   - Youtube Tanıtım 
+
+     https://youtube.com/shorts/lOatdJJ1OQo?feature=share
+
+
+   - Daily Scrum toplantısı örneği;
+     
+     ![WhatsApp Görsel 2024-07-29 saat 15 57 56_df7ee41d](https://github.com/user-attachments/assets/f6246d6a-47cf-4b30-969c-05ff54d979ab)
+     
+     ![WhatsApp Görsel 2024-07-29 saat 15 57 56_c5e41746](https://github.com/user-attachments/assets/464bba98-dcb6-4e3c-a2e6-68de9c054d61)
+     
+
+   - Sprint Review:
+       - Son düzenlemeler ve son testler yapıldı. 
+       - Takım ruhunu koruyan ve özveriyle çalışan ekip üyeleri birbirine teşekkür etti.
+       - Uygulamanın devam etmesi durumunda eklenecekler ve yapılacaklar belirlendi.
+
+   - Sprint Retrospective:
+       - Takım üyeleri için çok güzel bir deneyim olduğuna karar verildi. 
+       - Uygulamanın geliştirilmeye devam edilmesine karar verildi.
+       
+    
+  - Product Backlog URL
+      - https://trello.com/invite/b/66743eebc24283b96000ac85/ATTI69b9898637a8edc23741e003040d2eca8D546E4B/bootcamp-f59-sprint-3
 
 
